@@ -38,7 +38,6 @@ function onClickImg(name) {
 }
 
 function renderModal(project) {
-    // console.log($('#portfolioModal0'))
     $('.proj-name').text(project.name)
     $('.proj-sub-title').text(project.title)
     $('.proj-desc').text(project.desc)
@@ -46,7 +45,37 @@ function renderModal(project) {
     $('.proj-client').text(project.client)
     $('.proj-category').text(project.labels.join(' '))
     $('.proj-img').attr('src', project.url)
-    $('.proj-link').attr('href', project.link)
-    
+    $('.proj-link-btn').attr('onclick', `openLink('${project.link}')`)
+
 }
 
+const validateEmail = (email) => {
+    return email.match(
+        /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    );
+};
+
+function onSubmit(ev) {
+    ev.preventDefault()
+    const elEmail = document.querySelector('[name=contact-email]')
+    const elSubject = document.querySelector('[name=contact-subject]')
+    const elTxt = document.querySelector('[name=contact-txt]')
+    var url = `https://mail.google.com/mail/?view=cm&fs=1&to=${elEmail.value}&su=${elSubject.value}&body=${elTxt.value}`
+    if (!validateEmail(elEmail.value)) {
+        alert('Email is wrong, please fix')
+        return
+    }
+    if (!elSubject.value) {
+        alert('Please enter a subject')
+        return
+    } 
+    window.open(url)
+    elEmail.value = ''
+    elSubject.value = ''
+    elTxt.value = ''
+}
+
+
+function openLink(link) {
+    window.open(link)
+}

@@ -6,7 +6,6 @@ _createProjects()
 
 
 function getProjects() {
-    console.log(gProjects)
     return gProjects
 }
 
