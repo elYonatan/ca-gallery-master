@@ -20,11 +20,11 @@ function renderPortfolio() {
     <i class="fa fa-plus fa-3x"><br>${project.title}</i>
     </div>
     </div>
-    <img class="img-fluid" src="${project.url}" alt="">
+    <img class="img-fluid thumbnail" src="${project.url}" alt="">
     </a>
     <div class="portfolio-caption">
     <h4>${project.name}</h4>
-    <p class="text-muted">${project.labels[0]}</p>
+    <p class="green-hacker-color">Requested by: ${project.client}</p>
     </div>
     </div>`)
     $elPortfolio.html(strHTMLs)
@@ -41,7 +41,7 @@ function renderModal(project) {
     $('.proj-name').text(project.name)
     $('.proj-sub-title').text(project.title)
     $('.proj-desc').text(project.desc)
-    $('.proj-date').text(project.date)
+    $('.proj-date').text(project.publishedAt)
     $('.proj-client').text(project.client)
     $('.proj-category').text(project.labels.join(' '))
     $('.proj-img').attr('src', project.url)
