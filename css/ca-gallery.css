@@ -940,9 +940,10 @@ fieldset[disabled] .btn-xl:hover {
     min-height: 130px;
 }
 
-input::placeholder {
-    position: absolute;
+input::placeholder,
+[name=contact-txt] {
     font-size: 0.7em;
+    width: 100%;
 }
 
 .contact-container {
