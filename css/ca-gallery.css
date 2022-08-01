@@ -16,7 +16,9 @@ body {
     padding-bottom: 0px;
 }
 .thumbnail {
-    max-height: 350px;
+    height: 350px;
+    width: 100%;
+    object-fit: contain;
 }
 h1,
 h2,
