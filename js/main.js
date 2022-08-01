@@ -14,7 +14,7 @@ function renderPortfolio() {
     //html for the photo themselves
     const strHTMLs = projects.map(project => `
     <div class="col-md-4 col-sm-6 portfolio-item">
-    <a class="portfolio-link" data-toggle="modal" onclick="onClickImg('${project.name}')">
+    <a class="portfolio-link" data-toggle="modal" onclick="onClickImg('${project.name}')" href="#portfolioModal0">
     <div class="portfolio-hover">
     <div class="portfolio-hover-content">
     <i class="fa fa-plus fa-3x"><br>${project.title}</i>
@@ -32,7 +32,6 @@ function renderPortfolio() {
 
 function onClickImg(name) {
     //MODAL
-    console.log('here')
     const project = selectProject(name)
     //DOM
     renderModal(project)
@@ -48,5 +47,6 @@ function renderModal(project) {
     $('.proj-category').text(project.labels.join(' '))
     $('.proj-img').attr('src', project.url)
     $('.proj-link').attr('href', project.link)
+    
 }
 
