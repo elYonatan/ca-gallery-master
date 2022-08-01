@@ -131,9 +131,9 @@
           <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
         </div>
       </div>
-      <div class="row">
+      <div class="row portfolio-items-container">
         <div class="col-md-4 col-sm-6 portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal0">
             <div class="portfolio-hover">
               <div class="portfolio-hover-content">
                 <i class="fa fa-plus fa-3x"></i>
@@ -300,6 +300,47 @@
 
   <!-- Portfolio Modals -->
 
+  <!-- Modal 0 -->
+  <div class="portfolio-modal modal fade portfolioModal0" id="portfolioModal0" tabindex="-1" role="dialog"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="modal-body">
+                <!-- Project Details Go Here -->
+                <h2 class="proj-name">Project name</h2> <!-- Project name goes here-->
+                <p class="item-intro text-muted proj-sub-title">sub-title</p>
+                <!--Project sub-title goes here-->
+                <img class="img-fluid d-block mx-auto proj-img" src="" alt="">
+                <p class="proj-desc">Description</p>
+                <ul class="list-inline">
+                  <li>Date:<p class="proj-date"></p>
+                  </li>
+                  <li>Client:<p class="proj-client"></p>
+                  </li>
+                  <li>Category: <p class="proj-category"></p>
+                  </li>
+                </ul>
+                <button class="btn btn-success" type="button" onclick="openLink()">
+                  <i class="fa fa-times"></i>
+                  Open the Project</button>
+                <button class="btn btn-primary" data-dismiss="modal" type="button">
+                  <i class="fa fa-times"></i>
+                  Close Project</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Modal 1 -->
   <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog">
@@ -537,6 +578,7 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for this template -->
+  <script src="js/services/proj.services.js"></script>
   <script src="js/ca-gallery.js"></script>
   <script src="js/offCanvas.js"></script>
   <script src="js/main.js"></script>
