@@ -35,7 +35,7 @@ function _createProject(name, title, desc, time, client, labels, link) {
         name,
         title,
         desc,
-        url: `img/portfolio/${name.toLowerCase()}.jpg`,
+        url: `/img/portfolio/${name.toLowerCase()}.jpg`,
         publishedAt: `${month[time.getMonth()]} , ${1900 + time.getYear()}`,
         client,
         labels,
